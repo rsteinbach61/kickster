@@ -2,6 +2,7 @@
 <html>
 <head>
   <title>trackster</title>
+  <script src="https://use.fontawesome.com/ce00961acf.js"></script>
   <link rel="icon" href="favicon.png" type="image/x-icon">
   <link href="https://fonts.googleapis.com/css?family=Work+Sans:400,500,700" rel="stylesheet">
   <link href="https://fonts.googleapis.com/css?family=Righteous" rel="stylesheet">
@@ -16,5 +17,68 @@
   <script type="text/javascript" src="./resources/js/tests.js"></script>
 </head>
 <body>
+  <header>
+    <div class = "container-fluid header_box">
+      <div class = "row searchbar">
+
+          <div class = "col-md-6 bdr col-md-offset-1">
+            <h3>trackster</h3>
+          </div>
+          <div class = "col-md-3 bdr">
+            <input id = "search_box" class = "clearable" type="text" placeholder="Whatcha lookin for">
+          </div>
+          <div class = "col-md-1 bdr">
+            <a id = "searchbtn" class="btn btn-outline-secondary btn-sm search_button" role="button">
+            <i class="fa fa-search fa-flip-horizontal fa-2x"></i></a>
+          </div>
+          <div class = "col-md-1 bdr">
+          </div>
+      </div>
+    </div>
+  </header>
+  <div class = "container-fluid colum_headings">
+    <div class = "row header_row">
+      <div class = "col-md-1 colHead">
+        <p id = "hash">#</p>
+      </div>
+      <div class = "col-md-3 colHead">
+        <p>Song</p>
+      </div>
+      <div class = "col-md-3 colHead">
+        <p>Artist</p>
+      </div>
+      <div class = "col-md-3 colHead">
+        <p>Album</p>
+      </div>
+      <div class = "col-md-1 colHead">
+        <p>Popularity</p>
+      </div>
+      <div class = "col-md-1 colHead">
+        <p>Length</p>
+      </div>
+    </div>
+  </div>
+  <div class = "container-fluid song_list">
+    <div class = "row col_row">
+      <div class = "col-md-1 col play_btn">
+        <a id = "play_button" class = "btn btn-default btn-4x" role = "button"> <i class="fa fa-play-circle-o"></i></a>
+      </div>
+      <div class = "col-md-3 col">
+        <p>Fairytale in the Supermarket</p>
+      </div>
+      <div class = "col-md-3 col">
+        <p>The Raincoats</p>
+      </div>
+      <div class = "col-md-3 col">
+        <p>The Raincoats</p>
+      </div>
+      <div class = "col-md-1 col">
+        <p>101,839</p>
+      </div>
+      <div class = "col-md-1 col">
+        <p>3:01</p>
+      </div>
+    </div>
+  </div>
 </body>
 </html>
