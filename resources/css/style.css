@@ -60,20 +60,32 @@ html{
 .container-fluid.colum_headings, .container-fluid.song_list{
   padding: 0px;
 }
+.col_row{
+  height: 2.5rem;
+}
+.col{
+  height: 100%;
+  display: flex;
+  align-items: center;
+}
 .col p{
   color: rgb(74, 74, 74);
   font-family: 'Work Sans';
   font-size: 1rem;
   margin: 0px;
   height: 100%;
+  display: flex;
+  align-items: center;
 }
 .colHead, .col{
   padding-left: 0px;
 }
 #play_button{
-
+color: rgb(255, 102, 204);
+border: 0px;
 }
 .col.play_btn{
   display: flex;
   justify-content: center;
+
 }

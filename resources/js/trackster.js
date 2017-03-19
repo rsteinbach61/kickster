@@ -2,15 +2,11 @@
 $(document).ready(function() {
   var Trackster = {};
 $("#searchbtn").click(function(){
-  //var titleString = $("#search_box").val();
   Trackster.searchTracksByTitle($("#search_box").val());
 });
-
-
-
-
-
-
+$("#play_button").click(function(){
+  window.open( 'https://p.scdn.co/mp3-preview/22bf10aff02db272f0a053dff5c0063d729df988?cid=null');
+});
 /*
   Given an array of track data, create the HTML for a Bootstrap row for each.
   Append each "row" to the container in the body to display all tracks.
