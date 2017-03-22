@@ -1,6 +1,8 @@
 
 $(document).ready(function() {
   var Trackster = {};
+  var preview_array = [];
+
 $("#searchbtn").click(function(){
   Trackster.searchTracksByTitle($("#search_box").val());
 });
@@ -14,38 +16,34 @@ $("#play_button").click(function(){
 */
 Trackster.renderTracks = function(tracks1) {
 $("#song_row").empty();
-
-
   console.log(tracks1);
   for (var i = 0; i < tracks1.tracks.items.length; i++){
-    $("#play_button").click(function(){
-      window.open( 'https://p.scdn.co/mp3-preview/22bf10aff02db272f0a053dff5c0063d729df988?cid=null');
-      });
-  var row_code =
-  '<div class = "container-fluid song_list">' +
-    '<div class = "row col_row">' +
-      '<div class = "col-md-1 col play_btn">' +
-        '<a id = ' + '"play_button"' + 'class = ' + '"btn btn-default"' + 'role =' + '"button"' + '>' +
-         '<i class="fa fa-play-circle-o fa-2x"></i></a>' +
+
+    var row_code =
+    '<div class = "container-fluid song_list">' +
+      '<div class = "row col_row">' +
+        '<div class = "col-md-1 col play_btn">' +
+          '<a href=' + '"' + tracks1.tracks.items[i].preview_url + '"' + 'target=' + '"blank"' + 'id = ' + '"play_button"' + 'class = ' + '"btn btn-default"' + 'role =' + '"button"' + '>' +
+           '<i class="fa fa-play-circle-o fa-2x"></i></a>' +
+        '</div>' +
+        '<div class = "col-md-3 col">' +
+          '<p>' + tracks1.tracks.items[i].track_number + ' ' + tracks1.tracks.items[i].name + '</p>' +
+        '</div>' +
+        '<div class = "col-md-3 col">' +
+          '<p>' + tracks1.tracks.items[i].artists[0].name + '</p>' +
+        '</div>' +
+        '<div class = "col-md-3 col">' +
+          '<p>' + tracks1.tracks.items[i].album.name + '</p>' +
+        '</div>' +
+        '<div class = "col-md-1 col">' +
+          '<p>' + tracks1.tracks.items[i].popularity + '</p>' +
+        '</div>' +
+        '<div class = "col-md-1 col">' +
+          '<p>' + tracks1.tracks.items[i].duration_ms + '</p>' +
+        '</div>' +
       '</div>' +
-      '<div class = "col-md-3 col">' +
-        '<p>' + tracks1.tracks.items[i].name + '</p>' +
-      '</div>' +
-      '<div class = "col-md-3 col">' +
-        '<p>' + tracks1.tracks.items[i].artists[0].name + '</p>' +
-      '</div>' +
-      '<div class = "col-md-3 col">' +
-        '<p>' + tracks1.tracks.items[i].album.name + '</p>' +
-      '</div>' +
-      '<div class = "col-md-1 col">' +
-        '<p>' + tracks1.tracks.items[i].popularity + '</p>' +
-      '</div>' +
-      '<div class = "col-md-1 col">' +
-        '<p>' + tracks1.tracks.items[i].duration_ms + '</p>' +
-      '</div>' +
-    '</div>' +
-  '</div>';
-  $("#song_row").append(row_code);
+    '</div>';
+    $("#song_row").append(row_code);
 }
 };
 /*
